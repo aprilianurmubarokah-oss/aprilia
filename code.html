@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aprilia Portofolio — Desainer UI/UX &amp; Web Junior</title>
+<!-- Typography: Playfair Display & Geist -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "background": "#210e12",
+            "on-tertiary-fixed-variant": "#504444",
+            "on-error-container": "#ffdad6",
+            "primary-fixed": "#ffdad9",
+            "on-secondary-fixed-variant": "#69393a",
+            "inverse-on-surface": "#412a2e",
+            "surface-container": "#2f1a1e",
+            "outline": "#9d8d8d",
+            "on-secondary-container": "#eaa8a7",
+            "on-background": "#ffd9de",
+            "on-primary-fixed": "#2f1314",
+            "secondary-fixed-dim": "#f9b5b5",
+            "on-surface": "#ffd9de",
+            "tertiary-fixed-dim": "#d5c2c2",
+            "on-primary-container": "#5d3a3b",
+            "surface-bright": "#4b3337",
+            "tertiary-container": "#beacac",
+            "error": "#ffb4ab",
+            "error-container": "#93000a",
+            "on-surface-variant": "#d4c2c2",
+            "surface-container-high": "#3a2428",
+            "outline-variant": "#504444",
+            "secondary": "#f9b5b5",
+            "secondary-fixed": "#ffdad9",
+            "on-tertiary": "#392e2e",
+            "inverse-surface": "#ffd9de",
+            "tertiary": "#dac7c7",
+            "tertiary-fixed": "#f1dede",
+            "on-tertiary-fixed": "#231919",
+            "surface-container-highest": "#462e32",
+            "on-secondary": "#4e2325",
+            "secondary-container": "#6c3b3c",
+            "surface-container-lowest": "#1b090c",
+            "inverse-primary": "#7b5455",
+            "on-primary": "#472828",
+            "on-primary-fixed-variant": "#603d3e",
+            "surface-tint": "#ecbbba",
+            "surface-dim": "#210e12",
+            "primary-fixed-dim": "#ecbbba",
+            "on-secondary-fixed": "#350f11",
+            "surface": "#210e12",
+            "primary": "#f1c0c0",
+            "surface-container-low": "#2a161a",
+            "on-tertiary-container": "#4d4040",
+            "primary-container": "#d4a5a5",
+            "on-error": "#690005",
+            "surface-variant": "#462e32"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "2.5rem",
+            "space-lg": "3rem",
+            "margin": "1.5rem",
+            "space-xs": "0.375rem",
+            "space-md": "1.5rem",
+            "margin-desktop": "4rem",
+            "space-xl": "6rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.75rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Playfair Display", "serif"],
+            "headline-md": ["Playfair Display", "serif"],
+            "display-xl": ["Playfair Display", "serif"],
+            "label-sm": ["Geist", "sans-serif"],
+            "body-sm": ["Geist", "sans-serif"],
+            "body-lg": ["Geist", "sans-serif"],
+            "display-xl-mobile": ["Playfair Display", "serif"],
+            "label-md": ["Geist", "sans-serif"],
+            "headline-sm": ["Playfair Display", "serif"],
+            "body-md": ["Geist", "sans-serif"],
+            "headline-lg-mobile": ["Playfair Display", "serif"]
+          },
+          "fontSize": {
+            "headline-lg": ["3.5rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "headline-md": ["2.25rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "display-xl": ["5.5rem", { "lineHeight": "1.05", "letterSpacing": "-0.03em", "fontWeight": "400" }],
+            "label-sm": ["0.6875rem", { "lineHeight": "1.3", "letterSpacing": "0.16em", "fontWeight": "600" }],
+            "body-sm": ["0.8125rem", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "body-lg": ["1.125rem", { "lineHeight": "1.7", "letterSpacing": "-0.01em", "fontWeight": "300" }],
+            "display-xl-mobile": ["3.25rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "label-md": ["0.75rem", { "lineHeight": "1.4", "letterSpacing": "0.12em", "fontWeight": "500" }],
+            "headline-sm": ["1.5rem", { "lineHeight": "1.35", "letterSpacing": "0em", "fontWeight": "500" }],
+            "body-md": ["0.9375rem", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spin-slow 22s linear infinite;
+    }
+    .editorial-underline {
+      background-image: linear-gradient(to right, #f1c0c0, #f1c0c0);
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      background-size: 0% 1px;
+      transition: background-size 0.35s ease;
+    }
+    .editorial-underline:hover {
+      background-size: 100% 1px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen relative overflow-x-hidden">
+<!-- 1. NAVBAR ATAS TETAP (Komponen Bersama) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter-desktop py-space-sm max-w-full bg-background/90 dark:bg-background/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300 ease-out">
+<div class="flex items-center gap-6">
+<a class="font-headline-sm text-headline-sm tracking-tight text-on-surface dark:text-on-surface uppercase font-bold hover:text-primary transition-colors duration-200" href="#hero">
+        AP
+      </a>
+<span class="hidden md:inline-block font-label-sm text-label-sm uppercase tracking-widest text-outline">
+        Portofolio 04
+      </span>
+</div>
+<!-- Tautan navigasi mengikuti token dan huruf besar/kecil JSON persis -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-on-surface dark:text-on-surface border-b border-primary dark:border-primary pb-1" href="#work">Karya</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-200" href="#approach">Pendekatan</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-200" href="#services">Layanan</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-200" href="#case-studies">Arsip</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-200" href="#contact">Kontak</a>
+</nav>
+<!-- Aksi di bagian akhir -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center justify-center px-5 py-2 rounded-full border border-primary/40 bg-surface-container-low text-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-fixed transition-all duration-300 shadow-[0_0_15px_rgba(241,192,192,0.15)]" href="#contact">
+        Konsultasi
+      </a>
+<button aria-label="Buka Menu" class="md:hidden text-on-surface hover:text-primary p-2 focus:outline-none">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<!-- 2. BAGIAN HERO -->
+<section class="relative pt-36 md:pt-44 pb-space-xl px-margin md:px-margin-desktop max-w-[1440px] mx-auto min-h-[90vh] flex flex-col justify-center" id="hero">
+<!-- Cahaya radial sorotan tipis di latar -->
+<div class="absolute -top-10 right-1/4 w-[38rem] h-[38rem] rounded-full bg-primary/5 blur-[120px] pointer-events-none -z-10"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-gutter-desktop items-center">
+<!-- Jarak dan tipografi narasi kiri -->
+<div class="lg:col-span-7 flex flex-col justify-center z-10">
+<!-- Lencana subjudul / kicker -->
+<div class="inline-flex items-center gap-3 mb-6">
+<span class="w-8 h-[1px] bg-primary"></span>
+<span class="font-label-sm text-label-sm tracking-widest text-primary uppercase">DESAINER UI/UX &amp; WEB JUNIOR</span>
+</div>
+<!-- Judul editorial besar -->
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface tracking-tight leading-[1.05] mb-8 font-light">
+          DESAIN <span class="italic font-headline-lg text-primary font-normal">dengan</span> TUJUAN
+        </h1>
+<!-- Teks deskripsi -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+          Desainer UI/UX &amp; web junior asal Surabaya. Fokus pada antarmuka yang jelas, intuitif, dan berkarakter editorial.
+        </p>
+<!-- Dua tombol ajakan -->
+<div class="flex flex-wrap items-center gap-6">
+<a class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-surface-container border border-primary/50 text-on-surface font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container hover:text-on-primary-fixed transition-all duration-300 shadow-[0_0_20px_rgba(241,192,192,0.12)]" href="#work">
+            LIHAT KARYA SAYA
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200 group py-2" href="#contact">
+            UNDUH CV
+            <span class="material-symbols-outlined text-base group-hover:translate-y-0.5 transition-transform duration-200">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- Fitur visual kanan -->
+<div class="lg:col-span-5 relative mt-6 lg:mt-0 flex justify-center">
+<!-- Kontainer bingkai arsitektural -->
+<div class="relative w-full max-w-md aspect-[3/4] bg-surface-container-low border border-white/10 rounded-sm overflow-hidden p-2 group">
+<div class="relative w-full h-full overflow-hidden">
+<img alt="Potret Aprilia, Desainer UI/UX &amp; Web Junior" class="w-full h-full object-cover filter contrast-[1.03] transition-transform duration-700 ease-out group-hover:scale-105" src="profil/aprilia.jpeg"/>
+<!-- Lapisan suasana burgundy pekat -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+</div>
+<!-- Lencana melayang berputar dekoratif -->
+<div class="absolute -bottom-8 -left-6 md:-left-10 w-36 h-36 md:w-40 md:h-40 rounded-full border border-primary/30 bg-background/95 backdrop-blur-md flex items-center justify-center pointer-events-none select-none z-20 shadow-[0_4px_30px_rgba(0,0,0,0.4)]">
+<div class="w-full h-full relative flex items-center justify-center animate-spin-slow">
+<svg class="w-full h-full p-2" viewbox="0 0 100 100">
+<path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" id="circlePath"></path>
+<text class="fill-primary font-label-sm text-[8px] uppercase tracking-[0.24em]">
+<textpath href="#circlePath">
+                  Aprilia Nur Mubaroka • 2026 •
+                </textpath>
+</text>
+</svg>
+</div>
+<span class="absolute font-headline-sm text-primary italic font-serif">AP</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. BAR INFO DI BAWAH HERO -->
+<section class="w-full border-y border-outline-variant/30 bg-surface-container-lowest/60 backdrop-blur-sm">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-desktop py-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 divide-y sm:divide-y-0 lg:divide-x divide-outline-variant/20">
+<!-- Kolom 1 -->
+<div class="pt-4 sm:pt-0 lg:px-4 first:pl-0">
+<span class="block font-label-sm text-label-sm uppercase tracking-widest text-primary mb-1.5">LOKASI</span>
+<p class="font-body-md text-body-md text-on-surface">Surabaya, Indonesia</p>
+</div>
+<!-- Kolom 2 -->
+<div class="pt-4 sm:pt-0 lg:px-6">
+<span class="block font-label-sm text-label-sm uppercase tracking-widest text-primary mb-1.5">KETERSEDIAAN</span>
+<p class="font-body-md text-body-md text-on-surface">Freelance &amp; Full-time (Kuartal 3 2026)</p>
+</div>
+<!-- Kolom 3 -->
+<div class="pt-4 sm:pt-0 lg:px-6">
+<span class="block font-label-sm text-label-sm uppercase tracking-widest text-primary mb-1.5">EDISI</span>
+<p class="font-body-md text-body-md text-on-surface">Aprilia — Portofolio 04</p>
+</div>
+<!-- Kolom 4 -->
+<div class="pt-4 sm:pt-0 lg:px-6">
+<span class="block font-label-sm text-label-sm uppercase tracking-widest text-primary mb-1.5">MANIFESTO</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"Mengubah ide menjadi pengalaman digital yang bermakna."</p>
+</div>
+</div>
+<!-- Baris keterampilan -->
+<div class="pt-6 mt-6 border-t border-outline-variant/20">
+<span class="block font-label-sm text-label-sm uppercase tracking-widest text-primary mb-4">Skill</span>
+<div class="grid grid-cols-3 sm:grid-cols-5 gap-4">
+<div class="aspect-square bg-surface-container border border-white/10 rounded-sm overflow-hidden flex items-center justify-center">
+<img alt="Stiker desain 1" class="h-full w-full object-contain p-2" src="Skill/download%20(8).jpg"/>
+</div>
+<div class="aspect-square bg-surface-container border border-white/10 rounded-sm overflow-hidden flex items-center justify-center">
+<img alt="Stiker desain 2" class="h-full w-full object-contain p-2" src="Skill/download%20(9).jpg"/>
+</div>
+<div class="aspect-square bg-surface-container border border-white/10 rounded-sm overflow-hidden flex items-center justify-center">
+<img alt="Stiker logo Adobe Illustrator" class="h-full w-full object-contain p-2" src="Skill/2024%20sticker%20_%20AI%20Logo%20%5BAdobe%20Illustrator%5D.jpg"/>
+</div>
+<div class="aspect-square bg-surface-container border border-white/10 rounded-sm overflow-hidden flex items-center justify-center">
+<img alt="Logo 3D Blender" class="h-full w-full object-contain p-2" src="Skill/Blender_3d_Logo_-_Blender_Sticker-removebg-preview.png"/>
+</div>
+<div class="aspect-square bg-surface-container border border-white/10 rounded-sm overflow-hidden flex items-center justify-center">
+<img alt="Ikon aplikasi CapCut" class="h-full w-full object-contain p-2" src="Skill/capcut%20app%20icon.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. BAGIAN KARYA PILIHAN -->
+<section class="py-space-xl px-margin md:px-margin-desktop max-w-[1440px] mx-auto" id="work">
+<!-- Header bagian -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-outline-variant/20 pb-6 gap-4">
+<div>
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-primary mb-2 block">+ KARYA PILIHAN</span>
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-on-surface">
+          Arsip Portofolio Pilihan
+        </h2>
+</div>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary hover:text-on-surface transition-colors duration-200" href="#case-studies">
+        LIHAT SEMUA PROYEK
+        <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<!-- Grid proyek kurasi 6 kolom -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+<!-- Kartu 1: Short Video -->
+<article class="group bg-surface-container-low border border-white/10 hover:border-primary/40 rounded-sm overflow-hidden flex flex-col transition-all duration-300">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<div class="grid h-full w-full grid-cols-2 grid-rows-2 gap-[2px]">
+<img alt="Adegan short video 1" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="short/scene%201.png"/>
+<img alt="Adegan short video 2" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="short/scene%202.png"/>
+<img alt="Adegan short video 3" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="short/scene%203.png"/>
+<img alt="Adegan short video 4" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="short/scene%204.png"/>
+</div>
+<div class="absolute top-4 left-4">
+<span class="px-2.5 py-1 text-label-sm font-label-sm uppercase bg-background/80 backdrop-blur-md border border-white/15 text-on-surface rounded-none tracking-widest">
+              SHORT VIDEO, STORYTELLING
+            </span>
+</div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+                SHORT VIDEO
+              </h3>
+<span class="font-label-sm text-label-sm text-outline tracking-wider">2026</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+              Seri video singkat dengan ritme visual cepat, narasi ringkas, dan komposisi frame yang dirancang untuk menahan perhatian.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary group-hover:text-on-surface transition-colors duration-200" href="#case-studies">
+              Lihat Proyek
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline tracking-widest">INDEKS 01</span>
+</div>
+</div>
+</article>
+<!-- Kartu 2: Desain UI/UX -->
+<article class="group bg-surface-container-low border border-white/10 hover:border-primary/40 rounded-sm overflow-hidden flex flex-col transition-all duration-300">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<div class="grid h-full w-full grid-cols-2 grid-rows-2 gap-[2px]">
+<img alt="Tampilan antarmuka UI/UX 1" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="uiux/Screenshot%202025-09-30%20131756.png"/>
+<img alt="Tampilan antarmuka UI/UX 2" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="uiux/Screenshot%202025-10-01%20172653.png"/>
+<img alt="Tampilan antarmuka UI/UX 3" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="uiux/Screenshot%202025-10-01%20172720.png"/>
+<img alt="Tampilan antarmuka UI/UX 4" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="uiux/Screenshot%202025-10-01%20172738.png"/>
+</div>
+<div class="absolute top-4 left-4">
+<span class="px-2.5 py-1 text-label-sm font-label-sm uppercase bg-background/80 backdrop-blur-md border border-white/15 text-on-surface rounded-none tracking-widest">
+              UI/UX, PROTOTIPE
+            </span>
+</div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+                DESAIN UI/UX
+              </h3>
+<span class="font-label-sm text-label-sm text-outline tracking-wider">2026</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+              Riset pengguna, alur interaksi, dan sistem antarmuka yang dirancang agar setiap layar terasa jelas, konsisten, dan mudah digunakan.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary group-hover:text-on-surface transition-colors duration-200" href="#case-studies">
+              Lihat Proyek
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline tracking-widest">INDEKS 02</span>
+</div>
+</div>
+</article>
+<!-- Kartu 3: Desain Baju -->
+<article class="group bg-surface-container-low border border-white/10 hover:border-primary/40 rounded-sm overflow-hidden flex flex-col transition-all duration-300">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<div class="grid h-full w-full grid-cols-3 grid-rows-2 gap-[2px]">
+<img alt="Desain baju Aprilia, tampilan 1" class="col-span-2 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="Desain%20Baju/Gemini_Generated_Image_roiloeroiloeroil.jpg"/>
+<img alt="Desain baju Aprilia, tampilan 2" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="Desain%20Baju/Gemini_Generated_Image_urrkjuurrkjuurrk.jpg"/>
+<img alt="Desain baju Aprilia, tampilan 3" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="Desain%20Baju/desain%20baju.jpg"/>
+<img alt="Desain baju Aprilia, tampilan 4" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="Desain%20Baju/Gemini_Generated_Image_87mfji87mfji87mf.jpg"/>
+<img alt="Desain baju Aprilia, tampilan 5" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="Desain%20Baju/Gemini_Generated_Image_6khqwl6khqwl6khq.jpg"/>
+</div>
+<div class="absolute top-4 left-4">
+<span class="px-2.5 py-1 text-label-sm font-label-sm uppercase bg-background/80 backdrop-blur-md border border-white/15 text-on-surface rounded-none tracking-widest">
+              DESAIN BUSANA, BRANDING
+            </span>
+</div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+                DESAIN BAJU
+              </h3>
+<span class="font-label-sm text-label-sm text-outline tracking-wider">2026</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+              Koleksi busana dengan pendekatan editorial, pola dan ukuran yang presisi, serta identitas visual yang dibangun khusus untuk katalog digital.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary group-hover:text-on-surface transition-colors duration-200" href="#case-studies">
+              Lihat Proyek
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline tracking-widest">INDEKS 03</span>
+</div>
+</div>
+</article>
+<!-- Kartu 4: Animasi 3D -->
+<article class="group bg-surface-container-low border border-white/10 hover:border-primary/40 rounded-sm overflow-hidden flex flex-col transition-all duration-300">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<div class="grid h-full w-full grid-cols-3 grid-rows-2 gap-[2px]">
+<img alt="Model 3D alat makan" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="blender/alat%20makan.png"/>
+<img alt="Model 3D gerobak" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="blender/gerobak.png"/>
+<img alt="Model 3D mobil" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="blender/mobil.png"/>
+<img alt="Model 3D pedang" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="blender/pedang.png"/>
+<img alt="Model 3D plangton" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="blender/plangton.png"/>
+<img alt="Model 3D rumah" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="blender/rumah.png"/>
+</div>
+<div class="absolute top-4 left-4">
+<span class="px-2.5 py-1 text-label-sm font-label-sm uppercase bg-background/80 backdrop-blur-md border border-white/15 text-on-surface rounded-none tracking-widest">
+              ANIMASI 3D, BLENDER
+            </span>
+</div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+                ANIMASI 3D
+              </h3>
+<span class="font-label-sm text-label-sm text-outline tracking-wider">2026</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+              Kumpulan model dan animasi 3D bertema objek sehari-hari, dibuat dengan perhatian pada bentuk, material, dan pencahayaan.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary group-hover:text-on-surface transition-colors duration-200" href="#case-studies">
+              Lihat Proyek
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline tracking-widest">INDEKS 04</span>
+</div>
+</div>
+</article>
+<!-- Kartu 5: Desain Logo -->
+<article class="group bg-surface-container-low border border-white/10 hover:border-primary/40 rounded-sm overflow-hidden flex flex-col transition-all duration-300">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<div class="grid h-full w-full grid-rows-2 gap-[2px]">
+<img alt="Logo Nusantara Coffee" class="h-full w-full object-contain p-3 transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="logo/logo%20Nusantara%20Coffee.png"/>
+<img alt="Logo KBS April" class="h-full w-full object-contain p-3 transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="logo/logo%20Kbs%20April.png"/>
+</div>
+<div class="absolute top-4 left-4">
+<span class="px-2.5 py-1 text-label-sm font-label-sm uppercase bg-background/80 backdrop-blur-md border border-white/15 text-on-surface rounded-none tracking-widest">
+              IDENTITAS MEREK, LOGO
+            </span>
+</div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+                DESAIN LOGO
+              </h3>
+<span class="font-label-sm text-label-sm text-outline tracking-wider">2026</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+              Serangkaian desain logo yang mengeksplorasi bentuk, tipografi, dan keseimbangan visual agar identitas merek mudah dikenali.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary group-hover:text-on-surface transition-colors duration-200" href="#case-studies">
+              Lihat Proyek
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline tracking-widest">INDEKS 05</span>
+</div>
+</div>
+</article>
+<!-- Kartu 6: Magang -->
+<article class="group bg-surface-container-low border border-white/10 hover:border-primary/40 rounded-sm overflow-hidden flex flex-col transition-all duration-300">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<div class="grid h-full w-full grid-cols-3 grid-rows-2 gap-[2px]">
+<img alt="Dokumentasi magang Bunduran" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="magang/BUNDURAN%20130326.png"/>
+<img alt="Dokumentasi magang Hacks Ramadhan" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="magang/hacks%20ramadhan%20180326.png"/>
+<img alt="Dokumentasi magang Palalace" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="magang/PALALACE.png"/>
+<img alt="Dokumentasi magang satu lantai" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="magang/1%20LANTAI%20130326.png"/>
+<img alt="Dokumentasi magang dua lantai Victory" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="magang/2%20LANTAI%20VICTORY.png"/>
+<img alt="Dokumentasi magang Alana" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" src="magang/ALANA%20cmd.png"/>
+</div>
+<div class="absolute top-4 left-4">
+<span class="px-2.5 py-1 text-label-sm font-label-sm uppercase bg-background/80 backdrop-blur-md border border-white/15 text-on-surface rounded-none tracking-widest">
+              MAGANG, DOKUMENTASI PROYEK
+            </span>
+</div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+                MAGANG
+              </h3>
+<span class="font-label-sm text-label-sm text-outline tracking-wider">2026</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+              Pengalaman magang yang mencakup pendampingan proses desain, dokumentasi lapangan, dan kontribusi pada material visual tim.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary group-hover:text-on-surface transition-colors duration-200" href="#case-studies">
+              Lihat Proyek
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline tracking-widest">INDEKS 06</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 5. BAGIAN PROSES / PENDEKATAN -->
+<section class="py-space-xl px-margin md:px-margin-desktop max-w-[1440px] mx-auto border-t border-outline-variant/20" id="approach">
+<div class="max-w-3xl mb-16">
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-primary mb-2 block">+ PENDEKATAN SAYA</span>
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-6">
+        Metodologi yang ketat, menyeimbangkan intuisi dengan data.
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+        Setiap proyek berlangsung melalui fase-fase yang disengaja dan disiplin, terinspirasi oleh keahlian klasik Swiss serta analisis empiris interaksi manusia-komputer.
+      </p>
+</div>
+<!-- Kartu proses modular horizontal 5 langkah -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Langkah 01 -->
+<div class="bg-surface-container-low border border-white/10 p-6 flex flex-col justify-between hover:border-primary/40 transition-colors duration-200 min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-headline-md text-outline font-serif">01</span>
+<span class="material-symbols-outlined text-primary text-2xl">search</span>
+</div>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold mb-3">EKSPLORASI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Pendalaman, wawancara pengguna kualitatif, pemetaan lanskap kompetitor, dan penyelarasan merek.
+          </p>
+</div>
+<span class="text-[10px] tracking-widest uppercase text-outline mt-4 block">FASE I</span>
+</div>
+<!-- Langkah 02 -->
+<div class="bg-surface-container-low border border-white/10 p-6 flex flex-col justify-between hover:border-primary/40 transition-colors duration-200 min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-headline-md text-outline font-serif">02</span>
+<span class="material-symbols-outlined text-primary text-2xl">account_tree</span>
+</div>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold mb-3">DEFINISI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Arsitektur informasi, alur pengguna fungsional, peta perjalanan pelanggan, dan KPI.
+          </p>
+</div>
+<span class="text-[10px] tracking-widest uppercase text-outline mt-4 block">FASE II</span>
+</div>
+<!-- Langkah 03 -->
+<div class="bg-surface-container-low border border-white/10 p-6 flex flex-col justify-between hover:border-primary/40 transition-colors duration-200 min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-headline-md text-outline font-serif">03</span>
+<span class="material-symbols-outlined text-primary text-2xl">draw</span>
+</div>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold mb-3">DESAIN</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Wireframing, sistem UI fidelitas tinggi, ritme tipografi, dan penataan mikro-interaksi.
+          </p>
+</div>
+<span class="text-[10px] tracking-widest uppercase text-outline mt-4 block">FASE III</span>
+</div>
+<!-- Langkah 04 -->
+<div class="bg-surface-container-low border border-white/10 p-6 flex flex-col justify-between hover:border-primary/40 transition-colors duration-200 min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-headline-md text-outline font-serif">04</span>
+<span class="material-symbols-outlined text-primary text-2xl">code</span>
+</div>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold mb-3">PENGEMBANGAN</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Token desain yang skalabel, spesifikasi komponen, sistem berbasis token, dan serah terima ke pengembang.
+          </p>
+</div>
+<span class="text-[10px] tracking-widest uppercase text-outline mt-4 block">FASE IV</span>
+</div>
+<!-- Langkah 05 -->
+<div class="bg-surface-container-low border border-white/10 p-6 flex flex-col justify-between hover:border-primary/40 transition-colors duration-200 min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-headline-md text-outline font-serif">05</span>
+<span class="material-symbols-outlined text-primary text-2xl">tune</span>
+</div>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold mb-3">PENYEMPURNAAN</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Audit kegunaan, eksperimen CRO, pemeriksaan aksesibilitas (WCAG), dan penyempurnaan berkelanjutan.
+          </p>
+</div>
+<span class="text-[10px] tracking-widest uppercase text-outline mt-4 block">FASE V</span>
+</div>
+</div>
+</section>
+<!-- 6. BAGIAN STUDI KASUS -->
+<section class="py-space-xl px-margin md:px-margin-desktop max-w-[1440px] mx-auto border-t border-outline-variant/20" id="case-studies">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-outline-variant/20 pb-6 gap-4">
+<div>
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-primary mb-2 block">+ STUDI KASUS</span>
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-on-surface">
+          Magang
+        </h2>
+</div>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary hover:text-on-surface transition-colors duration-200" href="#contact">
+        LIHAT SEMUA STUDI KASUS
+        <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<!-- 2 kartu pratinjau studi kasus detail -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Studi Kasus 1 -->
+<div class="bg-surface-container-low border border-white/10 p-8 flex flex-col justify-between hover:border-primary/40 transition-all duration-300">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/20 mb-6">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">MAGANG PERIODE 1</span>
+<span class="font-label-sm text-label-sm text-outline">Februari - April 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6 leading-snug">
+            PT. Sukses Diamond Propertindo
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+            Berkontribusi pada proses desain dan dokumentasi proyek properti, mulai dari penyiapan aset visual, tata letak materi pemasaran, hingga pendampingan tim di lapangan.
+          </p>
+<!-- Grid metrik -->
+<div class="grid grid-cols-3 gap-2 py-4 border-y border-outline-variant/20 mb-8 bg-surface-container-lowest/40 px-3">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">3 Bulan</span>
+<span class="block font-label-sm text-[10px] tracking-wider uppercase text-outline mt-1">Durasi Magang</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">6 Proyek</span>
+<span class="block font-label-sm text-[10px] tracking-wider uppercase text-outline mt-1">Proyek Diikuti</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">30+</span>
+<span class="block font-label-sm text-[10px] tracking-wider uppercase text-outline mt-1">Aset Visual</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-primary transition-colors duration-200 group" href="https://drive.google.com/drive/folders/1-XMaOoRUiMchZ2hzqk459y3rMYhj9Kzt?usp=sharing" rel="noreferrer" target="_blank">
+          Sertifikat
+          <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+</a>
+</div>
+<!-- Studi Kasus 2 -->
+<div class="bg-surface-container-low border border-white/10 p-8 flex flex-col justify-between hover:border-primary/40 transition-all duration-300">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/20 mb-6">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">MAGANG PERIODE 2</span>
+<span class="font-label-sm text-label-sm text-outline">Juli - oktober 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6 leading-snug">
+            April Photo Studio
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+            Mendampingi alur kerja studio foto, mulai dari penyiapan aset visual dan tata letak materi, hingga dokumentasi hasil pemotretan untuk kebutuhan klien.
+          </p>
+<!-- Grid metrik -->
+<div class="grid grid-cols-2 gap-4 py-4 border-y border-outline-variant/20 mb-8 bg-surface-container-lowest/40 px-4">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">4 Bulan</span>
+<span class="block font-label-sm text-[10px] tracking-wider uppercase text-outline mt-1">Durasi Magang</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">20+</span>
+<span class="block font-label-sm text-[10px] tracking-wider uppercase text-outline mt-1">Aset Visual</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-primary transition-colors duration-200 group" href="https://drive.google.com/drive/folders/1Kjvq1f94syjlzaIy62MEior1yVAUaM8n?usp=drive_link" rel="noreferrer" target="_blank">
+          Sertifikat
+          <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 7. BAGIAN LAYANAN ("+ YANG SAYA LAKUKAN") -->
+<section class="py-space-xl px-margin md:px-margin-desktop max-w-[1440px] mx-auto border-t border-outline-variant/20" id="services">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-gutter-desktop">
+<!-- Kolom etos kiri -->
+<div class="lg:col-span-5">
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-primary mb-2 block">+ YANG SAYA LAKUKAN</span>
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-8">
+          Desain strategis. Pengalaman mulus. Dampak nyata.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+          Saya bekerja secara selektif dengan merek berwawasan maju, rumah mewah, dan inovator teknologi. Fokus saya adalah menciptakan artefak digital yang melampaui ekspektasi, meningkatkan persepsi, dan membangun loyalitas jangka panjang.
+        </p>
+<div class="p-6 bg-surface-container-low border border-white/10 rounded-sm">
+<p class="font-body-md text-body-md text-on-surface italic mb-4">
+            "Desain bukan sekadar ornamen; melainkan arsitektur dasar kepercayaan."
+          </p>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">— Filosofi Studio</span>
+</div>
+</div>
+<!-- 4 kartu layanan kanan -->
+<div class="lg:col-span-7 flex flex-col space-y-4">
+<!-- Layanan 1 -->
+<div class="p-8 bg-surface-container-low border border-white/10 hover:border-primary/40 transition-all duration-300 group">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+              01 / DESAIN UI &amp; UX
+            </h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors duration-200">devices</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+            Sistem desain skalabel, desain interaksi taktil, aplikasi mobile lintas platform, perangkat lunak SaaS kompleks, dan hierarki token desain.
+          </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Token Figma</span>
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Sistem Desain</span>
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Prototipe</span>
+</div>
+</div>
+<!-- Layanan 2 -->
+<div class="p-8 bg-surface-container-low border border-white/10 hover:border-primary/40 transition-all duration-300 group">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+              02 / DESAIN WEB &amp; ARAH SENI
+            </h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors duration-200">web</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+            Situs web berkualitas tinggi buatan khusus, halaman arahan konversi tinggi, flagship digital mewah, dan portofolio merek editorial.
+          </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Tata Letak Editorial</span>
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Arah Kreatif</span>
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Pengalaman Web</span>
+</div>
+</div>
+<!-- Layanan 3 -->
+<div class="p-8 bg-surface-container-low border border-white/10 hover:border-primary/40 transition-all duration-300 group">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+              03 / BRANDING DIGITAL
+            </h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors duration-200">auto_awesome</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+            Identitas visual yang dibangun untuk fidelitas layar, monograf digital, aturan tipografi, pedoman merek, dan bahasa gerak.
+          </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Panduan Tipografi</span>
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Manual Identitas</span>
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Mikro-interaksi</span>
+</div>
+</div>
+<!-- Layanan 4 -->
+<div class="p-8 bg-surface-container-low border border-white/10 hover:border-primary/40 transition-all duration-300 group">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200">
+              04 / KONSULTASI DESAIN
+            </h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors duration-200">psychology</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+            Evaluasi heuristik UX menyeluruh, audit aksesibilitas (WCAG 2.1 AAA), konsultasi strategi produk, dan kepemimpinan desain.
+          </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Audit UX</span>
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Pengujian Aksesibilitas</span>
+<span class="px-2 py-0.5 text-[10px] tracking-widest uppercase border border-outline-variant/40 text-on-surface-variant">Tinjauan Heuristik</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. BAGIAN FOOTER / KONTAK (implementasi footer komponen bersama) -->
+<footer class="w-full px-margin md:px-margin-desktop py-space-xl flex flex-col justify-between bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20 relative" id="contact">
+<!-- Siluet monogram besar di latar -->
+<div class="absolute right-8 top-12 font-display-xl text-[14rem] text-primary/5 select-none pointer-events-none hidden lg:block leading-none">
+      AP
+    </div>
+<div class="max-w-[1440px] mx-auto w-full relative z-10">
+<!-- Seruan atas -->
+<div class="mb-16 md:mb-24">
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-primary mb-4 block">+ KOLABORASI</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-serif max-w-4xl leading-tight mb-8">
+          Mari ciptakan sesuatu yang luar biasa.
+        </h2>
+<div class="flex flex-wrap items-center gap-6">
+<a class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary-container text-on-primary-fixed font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-all duration-300 font-semibold shadow-[0_0_20px_rgba(212,165,165,0.2)]" href="mailto:aprilianurmubarokah@gmail.com">
+            MARI BEKERJA BERSAMA
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<span class="font-body-md text-body-md text-on-surface-variant">
+            atau tulis langsung ke <a class="text-primary hover:underline underline-offset-4" href="mailto:aprilianurmubarokah@gmail.com">aprilianurmubarokah@gmail.com</a>
+</span>
+</div>
+</div>
+<!-- Grid detail -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-y border-outline-variant/20 mb-12">
+<div class="md:col-span-4">
+<span class="block font-label-sm text-label-sm uppercase tracking-widest text-primary mb-2">PERTANYAAN STUDIO</span>
+<a class="font-body-md text-body-md text-on-surface mb-1 hover:text-primary transition-colors duration-200" href="mailto:aprilianurmubarokah@gmail.com">aprilianurmubarokah@gmail.com</a>
+<p class="font-body-sm text-body-sm text-outline">Balasan biasanya dalam 24 jam</p>
+</div>
+<div class="md:col-span-4">
+<span class="block font-label-sm text-label-sm uppercase tracking-widest text-primary mb-2">GEOGRAFI</span>
+<p class="font-body-md text-body-md text-on-surface">Surabaya, Indonesia</p>
+<p class="font-body-sm text-body-sm text-outline">Tersedia secara global untuk kemitraan jarak jauh</p>
+</div>
+<div class="md:col-span-4">
+<span class="block font-label-sm text-label-sm uppercase tracking-widest text-primary mb-2">JARINGAN &amp; ARSIP</span>
+<div class="flex flex-wrap gap-4 pt-1">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="https://www.tiktok.com/@apriliaanm?is_from_webapp=1&amp;sender_device=pc" rel="noreferrer" target="_blank">Tiktok</a>
+<span class="text-outline-variant">/</span>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="https://www.instagram.com/myl1fee._" rel="noreferrer" target="_blank">Instagram</a>
+</div>
+</div>
+</div>
+<!-- Baris tautan dan hak cipta (tautan & teks footer bersama wajib) -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
+<!-- String JSON persis dirender apa adanya -->
+<p class="font-body-sm text-body-sm text-on-surface-variant order-2 md:order-1">
+          © 2026 Aprilia. Seluruh Hak Dilindungi. Portofolio No. 04.
+        </p>
+<!-- Tautan JSON persis dirender apa adanya -->
+<nav class="flex flex-wrap items-center gap-6 order-1 md:order-2">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-200" href="#hero">Riwayat Hidup</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-200" href="#work">Indeks Editorial</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-200" href="#hero">Kolofon</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>
